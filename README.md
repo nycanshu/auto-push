@@ -81,7 +81,7 @@ To verify that the workflow is working as expected, you can follow these steps:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/nycanshu/auto-push/blob/main/LICENSE.md) file for details.
 
 
 ## Authors
