@@ -1,11 +1,13 @@
 name: Twice Daily Auto Commit
 
+# Author: nycanshu
+# GitHub: https://github.com/nycanshu
+
 on:
   schedule:
     # Run this workflow every 12 hours
     - cron: "0 */12 * * *"
-    
-  schedule-dispacher:
+  
 
 jobs:
   daily-commit-job:
