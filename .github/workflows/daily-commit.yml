@@ -4,6 +4,8 @@ on:
   schedule:
     # Run this workflow every 12 hours
     - cron: "0 */12 * * *"
+    
+  schedule-dispacher:
 
 jobs:
   daily-commit-job:
