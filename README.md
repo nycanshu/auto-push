@@ -5,10 +5,9 @@ Auto-Push is designed to enhance your GitHub activity by using GitHub Actions to
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
-- [Workflow Overview](#workflow-overview)
-- [Customizing the Workflow](#customizing-the-workflow)
-- [Like This Project](#like-this-project)
+- [Running Tests](#running-tests)
 - [License](#license)
+- [Authors](#authors)
 
 ## Prerequisites
 
@@ -54,11 +53,6 @@ Follow these steps to set up the auto-push workflow:
    git add .github/workflows/twice-daily-commit.yml
    git commit -m "Add GitHub Actions workflow for daily commits"
    git push origin main
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Running Tests
 
 To verify that the workflow is working as expected, you can follow these steps:
@@ -83,6 +77,11 @@ To verify that the workflow is working as expected, you can follow these steps:
 
 4. **Troubleshoot Issues:**
    - If the workflow fails, review the error logs in the Actions tab. Common issues include permission errors, syntax errors in the workflow file, or misconfigured secrets.
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 ## Authors
