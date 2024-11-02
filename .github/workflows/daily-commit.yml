@@ -4,28 +4,27 @@ on:
   schedule:
     # Run this workflow every 12 hours
     - cron: "0 */12 * * *"
+
   workflow_dispatch:
-  
+
 jobs:
   daily-commit-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Explicit write access to repository contents
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to v3
 
       - name: Update File with Today's Date
         run: |
-          # Create or update a file with today's date and time
-          echo "Auto commit on $(date +'%Y-%m-%d %H:%M:%S')" >> daily-log.txt
+          echo "Auto commit on $(date +"%Y-%m-%d %I:%M:%S %p")" >> daily-log.txt
 
       - name: Commit Changes
         run: |
-          # Set up Git configuration
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Stage and commit changes with custom message format
           git add daily-log.txt
-          git commit -m "auto-commit-$(date +'%Y-%m-%d-%H-%M')"
+          git commit -m "auto-commit-$(date +'%Y-%m-%d-%I-%M %p')"
           git push
