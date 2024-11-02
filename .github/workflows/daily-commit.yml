@@ -4,8 +4,7 @@ on:
   schedule:
     # Run this workflow every 12 hours
     - cron: "0 */12 * * *"
-    
-  schedule-dispacher:
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   daily-commit-job:
